@@ -36,6 +36,16 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
+/*The inner Lexical Environment is searched first when the code wants to access a variable.  Then,
+it searches for the outer function until it reaches the global one.  In other words, the inner
+function has reference to the surrounding state (outer/Global function) of the Lexical environment.
+A closure gives you access to an outer function's scope from an inner function but, not from outer to inner.
+
+SO, 'const external' is in the Global Scope and it's being called in the Local Scope (line 53). There is 
+another function nested inside of 'function myFunction' and it's being called (line 58), also.  Line 62
+calls both console.log commands.  Oh, and 'nestedFunction' is nested in 'myFunction'; that's why it can access 'const internal'
+*/
+
 // Explanation:
 
 const external = "I'm outside the function";
