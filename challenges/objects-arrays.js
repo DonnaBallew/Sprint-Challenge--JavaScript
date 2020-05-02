@@ -277,10 +277,10 @@ const populationTotal = zooAnimals.reduce((population, animal) => {
   return (population += animal.population);
 }, 0);
 
-console.log(populationTotal);
+console.log(populationTotal); //56
 
 /*
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
-
+// DONE!!!
 */
