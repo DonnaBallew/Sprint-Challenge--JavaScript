@@ -132,7 +132,7 @@ for (let i = 0; i < graduates.length; i++) {
   universities.sort;
 }
 
-console.log(universities);
+console.log("All universities", universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
@@ -146,7 +146,7 @@ for (let i = 0; i < graduates.length; i++) {
   contactInfo[i] = `${graduates[i].first_name} ${graduates[i].email}`;
 }
 
-console.log(contactInfo);
+console.log("Contact Info", contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
@@ -157,7 +157,7 @@ for (let i = 0; i < graduates.length; i++) {
   }
 }
 
-console.log(unisWithUni);
+console.log("Uni string", unisWithUni);
 
 // ==== ADVANCED Array Methods ====
 
@@ -240,7 +240,7 @@ zooAnimals.forEach((sign) => {
   );
 });
 
-console.log(displayNames);
+console.log("Display Names", displayNames);
 
 /* Request 2: .map()
 
@@ -248,11 +248,11 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-const lowCaseAnimalNames = zooAnimals.map((animals) =>
-  animals.animal_name.toLowerCase()
+const lowCaseAnimalNames = zooAnimals.map((element) =>
+  element.animal_name.toLowerCase()
 );
 
-console.log(lowCaseAnimalNames);
+console.log("Lower Case Animal Names", lowCaseAnimalNames);
 
 /* Request 3: .filter() 
 
@@ -260,10 +260,10 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 const lowPopulationAnimals = zooAnimals.filter(
-  (animals) => animals.population < 5
+  (element) => element.population < 5
 );
 
-console.log(lowPopulationAnimals);
+console.log("Low Population", lowPopulationAnimals);
 
 /* Request 4: .reduce() 
 
@@ -274,7 +274,7 @@ const populationTotal = zooAnimals.reduce((population, animal) => {
   return (population += animal.population);
 }, 0);
 
-console.log(populationTotal); //56
+console.log("Population Total", populationTotal); //56
 
 /*
 
