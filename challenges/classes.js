@@ -41,8 +41,8 @@ const newCubMaker = new CubeMaker({
 });
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+console.log(cuboid2.volume()); // 100
+console.log(cuboid2.surfaceArea()); // 130
 console.log(newCubMaker.volume()); // 54
 console.log(newCubMaker.surfaceArea()); // 102
 

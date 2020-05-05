@@ -10,7 +10,7 @@
 let tyrannosaurus = {
   name: "tyrannosaurus",
   diet: "carnivorous",
-  weigth: "7000kg",
+  weight: "7000kg",
   length: "12m",
   period: "Late Cretaceous",
 };
@@ -19,7 +19,7 @@ let tyrannosaurus = {
 let stegosaurus = {
   name: "stegosaurus",
   diet: "herbivorous",
-  weigth: "2000kg",
+  weight: "2000kg",
   length: "9m",
   period: "Late Jurassic",
 };
@@ -28,7 +28,7 @@ let stegosaurus = {
 let velociraptor = {
   name: "velociraptor",
   diet: "carnivorous",
-  weigth: "15kg",
+  weight: "15kg",
   length: "1.8m",
   period: "Late Cretaceous",
 };
@@ -248,10 +248,9 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-const lowCaseAnimalNames = [];
-zooAnimals.map((animal) => {
-  lowCaseAnimalNames.push(animal.animal_name.toLowerCase());
-});
+const lowCaseAnimalNames = zooAnimals.map((animals) =>
+  animals.animal_name.toLowerCase()
+);
 
 console.log(lowCaseAnimalNames);
 
@@ -260,11 +259,9 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = [];
-
-zooAnimals.filter((animal) => {
-  animal.population < 5 ? lowPopulationAnimals.push(animal) : 0;
-});
+const lowPopulationAnimals = zooAnimals.filter(
+  (animals) => animals.population < 5
+);
 
 console.log(lowPopulationAnimals);
 

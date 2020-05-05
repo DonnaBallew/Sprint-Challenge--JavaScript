@@ -37,11 +37,13 @@ returns a new array of the same size.
 
 A function is technically a method and
 all data passed to a function it is EXPLICITLY passed. A method is function too but it sets a
-parameter for an object (data is implicitly passed).
+parameter for an object (data is implicitly passed). A method can be used only on an array or object depending
+on what method it is.
 
 3. What is closure?
 
-Closure is used for inheritance. When nesting functions, child functions can access the parent scope.
+Closure is used for inheritance. When nesting functions, child functions can access the parent scope. Anything outside
+of the function cannot use it (ex. Parent can't use the child functions).
 
 4. Describe the four rules of the 'this' keyword.
 
@@ -54,7 +56,7 @@ Closure is used for inheritance. When nesting functions, child functions can acc
 
 5. Why do we need super() in an extended class?
 
-super() gives the parent class the attributs of a child class and replaces .call.
+super() gives the child class the attributs of a parent class and replaces .call.
 
 ## Project Set up
 
